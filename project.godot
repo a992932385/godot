@@ -30,6 +30,7 @@ version_control/autoload_on_startup=true
 
 folder_colors={
 "res://Resources/": "blue",
+"res://Resources/Enemies/": "red",
 "res://Shaders/": "pink"
 }
 

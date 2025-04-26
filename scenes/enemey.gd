@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
 @export var player_reference : CharacterBody2D
+var damage_popup_node = preload("res://scenes/damage.tscn")
 var direction : Vector2
 var speed : float = 75
 var damage :float
 var knockback : Vector2
+var separation : float
 var elite : bool = false:
 	set(value):
 		elite = value
@@ -18,15 +20,32 @@ var type : Enemy:
 		$Sprite2D.texture = value.texture
 		damage = value.damage
 
-func  _physics_process(delta:) :
-	var separation = (player_reference.position - position).length()
+func  _physics_process(delta) :
+	check_separation(delta)
+	knockback_updata(delta)
+		
+func check_separation(_delta):
+	separation = (player_reference.position - position).length()
 	if separation >= 500 and not elite:
 		queue_free()
 	
+	if separation < player_reference.nearest_enemy_distance:
+		player_reference.nearest_enemy = self
+	
+func knockback_updata(delta):
 	velocity = (player_reference.position - position).normalized() * speed
 	knockback = knockback.move_toward(Vector2.ZERO, 1)
-	#velocity += knockback
-	
-	var collider = move_and_collide(velocity *delta)
+	velocity += knockback
+	var collider = move_and_collide(velocity * delta)
 	if collider:
-		collider.get_collider().knockback = (collider.get_collider().global_position - global_position).normalized() * 50
+		collider.get_collider().knockback = (collider.get_collider().global_position -
+		global_position).normalized() * 50
+
+func damage_popup(amount):
+	var popup = damage_popup_node.instantiate()
+	popup.text = str(amount)
+	popup.position = position + Vector2(-50,-25)
+	get_tree().current_scene.add_child(popup)
+	
+func take_damage(amount):
+	damage_popup(amount)

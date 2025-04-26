@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://jta45yt388pt" path="res://scenes/spawner.gd" id="1_ik2nu"]
 [ext_resource type="PackedScene" uid="uid://csmcb3fwv4tci" path="res://scenes/enemey.tscn" id="2_tx2ig"]
 [ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="3_p5s3f"]
-[ext_resource type="Resource" uid="uid://c461bi1smpaxm" path="res://Resources/eye.tres" id="4_e3f8v"]
-[ext_resource type="Resource" uid="uid://bmt0r2h55xjs7" path="res://Resources/cube.tres" id="5_3rx28"]
-[ext_resource type="Resource" uid="uid://4ja7luoqhm7u" path="res://Resources/eyelegs.tres" id="6_m1kbb"]
-[ext_resource type="Resource" uid="uid://d3ouaadlhchoy" path="res://Resources/eye ghost.tres" id="7_q0apd"]
-[ext_resource type="Resource" uid="uid://c16h2miq2jrox" path="res://Resources/triple.tres" id="8_07n7x"]
+[ext_resource type="Resource" uid="uid://c461bi1smpaxm" path="res://Resources/Enemies/eye.tres" id="4_e3f8v"]
+[ext_resource type="Resource" uid="uid://bmt0r2h55xjs7" path="res://Resources/Enemies/cube.tres" id="5_3rx28"]
+[ext_resource type="Resource" uid="uid://4ja7luoqhm7u" path="res://Resources/Enemies/eyelegs.tres" id="6_m1kbb"]
+[ext_resource type="Resource" uid="uid://d3ouaadlhchoy" path="res://Resources/Enemies/eye ghost.tres" id="7_q0apd"]
+[ext_resource type="Resource" uid="uid://c16h2miq2jrox" path="res://Resources/Enemies/triple.tres" id="8_07n7x"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_ik2nu")

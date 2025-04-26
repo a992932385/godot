@@ -6,7 +6,16 @@ var health : float = 100:
 		health = value
 		%Health.value = value
 
+var nearest_enemy : CharacterBody2D
+var nearest_enemy_distance : float = INF
+
 func _physics_process(delta):
+	if nearest_enemy:
+		nearest_enemy_distance = nearest_enemy.separation
+		print(nearest_enemy.name)
+	else:
+		nearest_enemy_distance = INF
+		
 	velocity=Input.get_vector("left","right","up","down")*speed
 	move_and_collide(velocity*delta)
  
@@ -18,6 +27,6 @@ func _on_self_damage_body_entered(body):
 	take_damage(body.damage)
 
 
-func _on_timer_timeout() -> void:
+func _on_timer_timeout() :
 	%Collision.set_deferred("disabled",true)
 	%Collision.set_deferred("disabled",false)
