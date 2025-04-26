@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://4ja7luoqhm7u"]
 
-[ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="1_7f8bo"]
-[ext_resource type="Texture2D" uid="uid://cyqfh7fumre2x" path="res://assets/RPG Battlers 3/3 v1.png" id="2_ebsga"]
+[ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="1_0bjxu"]
+[ext_resource type="Texture2D" uid="uid://cyqfh7fumre2x" path="res://assets/RPG Battlers 3/3 v1.png" id="2_2qk8t"]
 
 [resource]
-script = ExtResource("1_7f8bo")
+script = ExtResource("1_0bjxu")
 title = "EyeLegs"
-texture = ExtResource("2_ebsga")
-health = 0.0
+texture = ExtResource("2_2qk8t")
+health = 3.0
 damage = 5.0
 metadata/_custom_type_script = "uid://c5t2ceec6hilh"

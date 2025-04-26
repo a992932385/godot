@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://c16h2miq2jrox"]
 
-[ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="1_yikob"]
-[ext_resource type="Texture2D" uid="uid://2dw414jorav2" path="res://assets/RPG Battlers 3/4 v1.png" id="2_a8xjr"]
+[ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="1_2n2ai"]
+[ext_resource type="Texture2D" uid="uid://2dw414jorav2" path="res://assets/RPG Battlers 3/4 v1.png" id="2_7no78"]
 
 [resource]
-script = ExtResource("1_yikob")
+script = ExtResource("1_2n2ai")
 title = "Triple"
-texture = ExtResource("2_a8xjr")
-health = 0.0
+texture = ExtResource("2_7no78")
+health = 3.0
 damage = 9.0
 metadata/_custom_type_script = "uid://c5t2ceec6hilh"

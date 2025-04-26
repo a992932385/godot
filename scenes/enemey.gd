@@ -7,6 +7,13 @@ var speed : float = 75
 var damage :float
 var knockback : Vector2
 var separation : float
+
+var health : float:
+	set(value):
+		health = value
+		if health <= 0:
+			queue_free()
+
 var elite : bool = false:
 	set(value):
 		elite = value
@@ -19,6 +26,7 @@ var type : Enemy:
 		type = value
 		$Sprite2D.texture = value.texture
 		damage = value.damage
+		health = value.health
 
 func  _physics_process(delta) :
 	check_separation(delta)
@@ -48,4 +56,10 @@ func damage_popup(amount):
 	get_tree().current_scene.add_child(popup)
 	
 func take_damage(amount):
+	var tween = get_tree().create_tween()
+	tween.tween_property($Sprite2D, "modulate", Color(3, 0.25 ,0.25), 0.2)
+	tween.chain().tween_property($Sprite2D, "modulate", Color(1, 1, 1),0.2)
+	tween.bind_node(self)
+	
 	damage_popup(amount)
+	health -= amount
