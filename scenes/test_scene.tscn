@@ -1,11 +1,9 @@
-[gd_scene load_steps=11 format=4 uid="uid://dclbjy52rfna0"]
+[gd_scene load_steps=9 format=4 uid="uid://dclbjy52rfna0"]
 
 [ext_resource type="Texture2D" uid="uid://sctcpugk0x08" path="res://assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Tiles/Tileset.png" id="1_7ddre"]
 [ext_resource type="PackedScene" uid="uid://5ai2pgkflnoh" path="res://scenes/player.tscn" id="1_g7g4h"]
 [ext_resource type="PackedScene" uid="uid://5vn8rw1ech6l" path="res://scenes/spawner.tscn" id="1_j8ivh"]
 [ext_resource type="Texture2D" uid="uid://prm4esxvblh1" path="res://assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Decorations/Decorations.png" id="2_qjeyg"]
-[ext_resource type="PackedScene" uid="uid://krm6r5gx5kfs" path="res://scenes/pickups.tscn" id="5_3qnke"]
-[ext_resource type="Resource" uid="uid://dm17my24oqb66" path="res://Resources/Pickups/Blue Gem.tres" id="6_wtsjf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3qnke"]
 texture = ExtResource("1_7ddre")
@@ -61,23 +59,3 @@ player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("1_g7g4h")]
 position = Vector2(150, 302)
-
-[node name="Pickups" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("5_3qnke")]
-position = Vector2(210, 368)
-type = ExtResource("6_wtsjf")
-player_reference = NodePath("../Player")
-
-[node name="Pickups2" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("5_3qnke")]
-position = Vector2(238, 286)
-type = ExtResource("6_wtsjf")
-player_reference = NodePath("../Player")
-
-[node name="Pickups3" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("5_3qnke")]
-position = Vector2(165, 260)
-type = ExtResource("6_wtsjf")
-player_reference = NodePath("../Player")
-
-[node name="Pickups4" parent="." node_paths=PackedStringArray("player_reference") instance=ExtResource("5_3qnke")]
-position = Vector2(126, 365)
-type = ExtResource("6_wtsjf")
-player_reference = NodePath("../Player")

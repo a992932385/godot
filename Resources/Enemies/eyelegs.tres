@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://4ja7luoqhm7u"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://4ja7luoqhm7u"]
 
 [ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="1_0bjxu"]
+[ext_resource type="Script" uid="uid://cj4g2v5fupobx" path="res://scenes/PickupResource.gd" id="1_frp6m"]
 [ext_resource type="Texture2D" uid="uid://cyqfh7fumre2x" path="res://assets/RPG Battlers 3/3 v1.png" id="2_2qk8t"]
+[ext_resource type="Resource" uid="uid://d3bf4keyqrm05" path="res://Resources/Pickups/Green Gem.tres" id="2_tmef7"]
 
 [resource]
 script = ExtResource("1_0bjxu")
@@ -9,4 +11,5 @@ title = "EyeLegs"
 texture = ExtResource("2_2qk8t")
 health = 3.0
 damage = 5.0
+drops = Array[ExtResource("1_frp6m")]([ExtResource("2_tmef7")])
 metadata/_custom_type_script = "uid://c5t2ceec6hilh"
