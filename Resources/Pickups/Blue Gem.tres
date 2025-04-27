@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://dm17my24oqb66"]
+
+[ext_resource type="Texture2D" uid="uid://ww1a652f7nfp" path="res://assets/Level UP & Option/Emerald.png" id="1_nevim"]
+[ext_resource type="Script" uid="uid://c0godpj6f8ork" path="res://scenes/Gem.gd" id="2_tmmxm"]
+
+[resource]
+script = ExtResource("2_tmmxm")
+XP = 1.0
+title = "Blue Gam"
+icon = ExtResource("1_nevim")
+description = "Gams Experience Points."
+metadata/_custom_type_script = "uid://c0godpj6f8ork"

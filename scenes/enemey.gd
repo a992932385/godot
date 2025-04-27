@@ -8,6 +8,8 @@ var damage :float
 var knockback : Vector2
 var separation : float
 
+var drop = preload("res://scenes/pickups.tscn")
+
 var health : float:
 	set(value):
 		health = value
