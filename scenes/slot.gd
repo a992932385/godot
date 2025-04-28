@@ -5,6 +5,7 @@ extends PanelContainer
 		item = value
 		$TextureRect.texture = value.texture
 		$Coolddown.wait_time = value.cooldown
+		item.slot = self
 		
 
 func _on_coolddown_timeout():

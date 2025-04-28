@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://j0nww12j02lt" path="res://assets/Level UP & Option/ExpBar.png" id="5_fjrip"]
 [ext_resource type="PackedScene" uid="uid://cvawojoigwogb" path="res://scenes/passive_slot.tscn" id="5_ur7pv"]
 [ext_resource type="Texture2D" uid="uid://bvcxgu42gf4tr" path="res://assets/Level UP & Option/ProgressOfExpBar.png" id="6_smehm"]
-[ext_resource type="Resource" uid="uid://w4ymlucvmo6p" path="res://Resources/Passive Items/Movement Speed.tres" id="7_d2wvv"]
+[ext_resource type="Resource" uid="uid://c2jmjlf2bp1gi" path="res://Resources/Passive Items/Magnet.tres" id="7_d2wvv"]
 [ext_resource type="Script" uid="uid://ck08824it04c1" path="res://scenes/options.gd" id="7_fjrip"]
 
 [sub_resource type="Gradient" id="Gradient_d2wvv"]
