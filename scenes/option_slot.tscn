@@ -24,6 +24,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 
 [node name="Description" type="Label" parent="."]
+layout_mode = 0
 offset_left = 96.0
 offset_top = 3.0
 offset_right = 288.0

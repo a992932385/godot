@@ -1,13 +1,13 @@
 extends PanelContainer
 
-@export var weapon : Weapon:
+@export var item : Weapon:
 	set(value):
-		weapon = value
+		item = value
 		$TextureRect.texture = value.texture
 		$Coolddown.wait_time = value.cooldown
 		
 
-func _on_coolddown_timeout() -> void:
-	if weapon:
-		$Coolddown.wait_time = weapon.cooldown
-		weapon.activate(owner, owner.nearest_enemy,get_tree())
+func _on_coolddown_timeout():
+	if item:
+		$Coolddown.wait_time = item.cooldown
+		item.activate(owner, owner.nearest_enemy,get_tree())

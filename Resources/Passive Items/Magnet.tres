@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://c2jmjlf2bp1gi"]
+
+[ext_resource type="Script" uid="uid://cfj5cq2kv25sq" path="res://scenes/PassiveItem.gd" id="1_covkb"]
+[ext_resource type="Texture2D" uid="uid://c2dbnk6vcj2lv" path="res://assets/Level UP & Option/Coal.png" id="2_3q8w4"]
+[ext_resource type="Script" uid="uid://db4se630cvp52" path="res://scenes/Stats.gd" id="3_pv121"]
+
+[sub_resource type="Resource" id="Resource_vwmur"]
+script = ExtResource("3_pv121")
+description = "+15 Magnet Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 15.0
+growth = 0.0
+metadata/_custom_type_script = "uid://db4se630cvp52"
+
+[sub_resource type="Resource" id="Resource_dx20o"]
+script = ExtResource("3_pv121")
+description = "+20 Magnet Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 20.0
+growth = 0.0
+metadata/_custom_type_script = "uid://db4se630cvp52"
+
+[sub_resource type="Resource" id="Resource_f7v4d"]
+script = ExtResource("3_pv121")
+description = "+25 Magnet Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 25.0
+growth = 0.0
+metadata/_custom_type_script = "uid://db4se630cvp52"
+
+[resource]
+script = ExtResource("1_covkb")
+upgrades = Array[ExtResource("3_pv121")]([SubResource("Resource_vwmur"), SubResource("Resource_dx20o"), SubResource("Resource_f7v4d")])
+title = "Magnet"
+texture = ExtResource("2_3q8w4")
+metadata/_custom_type_script = "uid://cfj5cq2kv25sq"

@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dka8ykbbpcr54"]
+
+[ext_resource type="Script" uid="uid://cfj5cq2kv25sq" path="res://scenes/PassiveItem.gd" id="1_ajivi"]
+[ext_resource type="Texture2D" uid="uid://bwdt1vc86p01b" path="res://assets/Level UP & Option/Lapis.png" id="2_i38g4"]
+[ext_resource type="Script" uid="uid://db4se630cvp52" path="res://scenes/Stats.gd" id="3_nt5xg"]
+
+[sub_resource type="Resource" id="Resource_p6o4y"]
+script = ExtResource("3_nt5xg")
+description = "+ 0.2 Health/Sec"
+max_health = 0.0
+recovery = 0.2
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://db4se630cvp52"
+
+[sub_resource type="Resource" id="Resource_ery8n"]
+script = ExtResource("3_nt5xg")
+description = "+ 0.4 Health/Sec"
+max_health = 0.0
+recovery = 0.4
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://db4se630cvp52"
+
+[sub_resource type="Resource" id="Resource_dbnrw"]
+script = ExtResource("3_nt5xg")
+description = "+ 0.6 Health/Sec"
+max_health = 0.0
+recovery = 0.6
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://db4se630cvp52"
+
+[resource]
+script = ExtResource("1_ajivi")
+upgrades = Array[ExtResource("3_nt5xg")]([SubResource("Resource_p6o4y"), SubResource("Resource_ery8n"), SubResource("Resource_dbnrw")])
+title = "Recovery"
+texture = ExtResource("2_i38g4")
+metadata/_custom_type_script = "uid://cfj5cq2kv25sq"
