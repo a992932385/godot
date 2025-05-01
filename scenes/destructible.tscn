@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://b44y6olcioub7"]
+
+[ext_resource type="Texture2D" uid="uid://b6176rjlmikh1" path="res://assets/Sprite-0006.png" id="1_l8yo0"]
+[ext_resource type="Script" uid="uid://bp6ekpf08cjv0" path="res://scenes/destructible.gd" id="2_u70qa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iw4aa"]
+radius = 7.0
+
+[sub_resource type="Gradient" id="Gradient_l8yo0"]
+offsets = PackedFloat32Array(0, 0.649351, 1)
+colors = PackedColorArray(0.984258, 0.984076, 0.984076, 1, 0.370694, 0.370626, 0.370626, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u70qa"]
+gradient = SubResource("Gradient_l8yo0")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.842, 0.197)
+
+[node name="Destructible" type="Sprite2D"]
+position = Vector2(2, -7)
+texture = ExtResource("1_l8yo0")
+hframes = 4
+vframes = 2
+script = ExtResource("2_u70qa")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_iw4aa")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(1, 1, 0.458824, 1)
+texture = SubResource("GradientTexture2D_u70qa")
+texture_scale = 4.3
