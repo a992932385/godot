@@ -64,7 +64,7 @@ func _on_elite_timeout() :
 	spawn(get_random_position(),true	)
 
 
-func _on_destructible_timeout() -> void:
+func _on_destructible_timeout():
 	spawn_destructible(get_random_position())
 	
 

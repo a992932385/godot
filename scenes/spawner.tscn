@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://5vn8rw1ech6l"]
 
 [ext_resource type="Script" uid="uid://jta45yt388pt" path="res://scenes/spawner.gd" id="1_ik2nu"]
-[ext_resource type="PackedScene" uid="uid://csmcb3fwv4tci" path="res://scenes/enemey.tscn" id="2_tx2ig"]
+[ext_resource type="PackedScene" uid="uid://csmcb3fwv4tci" path="res://scenes/enemy.tscn" id="2_tx2ig"]
 [ext_resource type="PackedScene" uid="uid://b44y6olcioub7" path="res://scenes/destructible.tscn" id="3_e3f8v"]
 [ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="3_p5s3f"]
 [ext_resource type="Resource" uid="uid://c461bi1smpaxm" path="res://Resources/Enemies/eye.tres" id="4_e3f8v"]
@@ -48,6 +48,7 @@ autostart = true
 
 [node name="Pattern" type="Timer" parent="."]
 wait_time = 10.0
+autostart = true
 
 [node name="Elite" type="Timer" parent="."]
 wait_time = 9.0

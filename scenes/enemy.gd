@@ -68,6 +68,7 @@ func take_damage(amount):
 	health -= amount
 
 func drop_item():
+	print("drop_item")
 	if type.drops.size() == 0:
 		return
 		
@@ -82,3 +83,4 @@ func drop_item():
 	item_to_drop.player_reference = player_reference
 	
 	get_tree().current_scene.call_deferred("add_child", item_to_drop)
+	queue_free()

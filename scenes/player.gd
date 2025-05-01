@@ -79,9 +79,9 @@ func check_XP():
 		level += 1
 
 
-func _on_magnet_area_entered(area: Area2D) -> void:
-	if area.has_meta("follow"):
-		area.fllow(self)
+func _on_magnet_area_entered(area):
+	if area.has_method("follow"):
+		area.follow(self)
 
 func gain_gold(amount):
 	gold += amount

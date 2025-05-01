@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="Chest" load_steps=3 format=3 uid="uid://cbk5w7a8ymf27"]
+[gd_resource type="Resource" script_class="Chest" load_steps=4 format=3 uid="uid://cbk5w7a8ymf27"]
 
 [ext_resource type="Texture2D" uid="uid://dcyx2md5fhd4m" path="res://assets/title009.png" id="1_sm8q6"]
 [ext_resource type="Script" uid="uid://d0wiyxu65kxn0" path="res://scenes/ChestResource.gd" id="2_hk1k0"]
+[ext_resource type="AudioStream" uid="uid://bp00kcqcg4ujx" path="res://assets/SFX/662467__fullstacksound__rope_pickup.wav" id="3_hk1k0"]
 
 [resource]
 script = ExtResource("2_hk1k0")
 title = "Boss Chest"
 icon = ExtResource("1_sm8q6")
 description = ""
+sound = ExtResource("3_hk1k0")
 metadata/_custom_type_script = "uid://d0wiyxu65kxn0"

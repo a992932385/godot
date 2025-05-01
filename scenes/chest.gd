@@ -60,8 +60,8 @@ func _on_open_pressed():
 	$Close.show()
  
 func add_gold(index):
-	var gold : Gold = load("res://Resources/Others/Gold.tres")
+	var gold : Gold = load("res://Resources/Pickups/Gold.tres")
 	gold.player_reference = owner
-	rewards.get_child(index).texture = gold.texture
-	gold.upgrade_item()
+	rewards.get_child(index).texture = gold.icon
+	gold.activate()
  

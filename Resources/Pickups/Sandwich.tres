@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Health" load_steps=4 format=3 uid="uid://6oxl35yr3ls5"]
+
+[ext_resource type="Texture2D" uid="uid://pt20i621spim" path="res://assets/Ghostpixxells_pixelfood/92_sandwich.png" id="1_qxp5q"]
+[ext_resource type="Script" uid="uid://dilis5671d5n" path="res://scenes/Health.gd" id="2_rmk3e"]
+[ext_resource type="AudioStream" uid="uid://c4ogt3xq2alqd" path="res://assets/SFX/317701__jalastram__sfx_pickup_48.wav" id="3_rmk3e"]
+
+[resource]
+script = ExtResource("2_rmk3e")
+amount = 20
+title = "Sandwich"
+icon = ExtResource("1_qxp5q")
+description = "+20 Health"
+sound = ExtResource("3_rmk3e")
+metadata/_custom_type_script = "uid://dilis5671d5n"

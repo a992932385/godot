@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Gold" load_steps=4 format=3 uid="uid://djq2m603j26n1"]
+
+[ext_resource type="Texture2D" uid="uid://c8w3qn8u63063" path="res://assets/Level UP & Option/Iron Ingot.png" id="1_yo82v"]
+[ext_resource type="Script" uid="uid://dcrxp7ji0t1k7" path="res://scenes/Gold.gd" id="2_oo1lb"]
+[ext_resource type="AudioStream" uid="uid://b1vmil67t23fb" path="res://assets/SFX/162805__timgormly__8-bit-coin11.wav" id="3_oo1lb"]
+
+[resource]
+script = ExtResource("2_oo1lb")
+gold = 5
+title = "Gold"
+icon = ExtResource("1_yo82v")
+description = "+5 Gold"
+sound = ExtResource("3_oo1lb")
+metadata/_custom_type_script = "uid://dcrxp7ji0t1k7"

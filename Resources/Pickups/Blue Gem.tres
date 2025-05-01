@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://dm17my24oqb66"]
+[gd_resource type="Resource" script_class="Gem" load_steps=4 format=3 uid="uid://dm17my24oqb66"]
 
 [ext_resource type="Texture2D" uid="uid://ww1a652f7nfp" path="res://assets/Level UP & Option/Emerald.png" id="1_nevim"]
 [ext_resource type="Script" uid="uid://c0godpj6f8ork" path="res://scenes/Gem.gd" id="2_tmmxm"]
+[ext_resource type="AudioStream" uid="uid://d4hr1b3f01770" path="res://assets/SFX/611795__metalfortress__choosing2.wav" id="3_tmmxm"]
 
 [resource]
 script = ExtResource("2_tmmxm")
@@ -9,4 +10,5 @@ XP = 1.0
 title = "Blue Gam"
 icon = ExtResource("1_nevim")
 description = "Gams Experience Points."
+sound = ExtResource("3_tmmxm")
 metadata/_custom_type_script = "uid://c0godpj6f8ork"

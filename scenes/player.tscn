@@ -419,6 +419,7 @@ autostart = true
 [node name="Magnet" type="Area2D" parent="."]
 light_mask = 0
 visibility_layer = 4
+collision_mask = 4
 
 [node name="Magnet" type="CollisionShape2D" parent="Magnet"]
 unique_name_in_owner = true
