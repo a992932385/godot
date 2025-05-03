@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Lightning" load_steps=7 format=3 uid="uid://bwliqxaikda74"]
+
+[ext_resource type="Texture2D" uid="uid://dobixe5blb7fn" path="res://assets/RPG Items 16x16 Pack 1/staff25.png" id="1_nbxs5"]
+[ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="2_8rew5"]
+[ext_resource type="Script" uid="uid://b6putbx4klk37" path="res://scenes/Lightning.gd" id="3_qs88s"]
+[ext_resource type="AudioStream" uid="uid://cpuhabho0jq4a" path="res://assets/SFX/267407__thestarking__lightning-thunder-building-noise.wav" id="4_b15j6"]
+[ext_resource type="Texture2D" uid="uid://r0tesk0j61or" path="res://assets/lightning_skill3_frame3.png" id="5_u1xvp"]
+[ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="6_rm8vv"]
+
+[resource]
+script = ExtResource("3_qs88s")
+amount = 7
+damage = 10.0
+cooldown = 2.0
+speed = 0.0
+projectile_node = ExtResource("2_8rew5")
+upgrades = Array[ExtResource("6_rm8vv")]([])
+sound = ExtResource("4_b15j6")
+title = "Lightning Loop"
+icon = ExtResource("1_nbxs5")
+texture = ExtResource("5_u1xvp")
+metadata/_custom_type_script = "uid://b6putbx4klk37"

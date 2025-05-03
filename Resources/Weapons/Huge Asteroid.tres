@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=6 format=3 uid="uid://bt178ihc37kun"]
+
+[ext_resource type="Texture2D" uid="uid://1282aj8klal5" path="res://assets/RPG Items 16x16 Pack 1/book14.png" id="1_xlr6u"]
+[ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="2_mliah"]
+[ext_resource type="Script" uid="uid://dq26qpcx2n3mi" path="res://scenes/Circular Weapon.gd" id="3_ectla"]
+[ext_resource type="Texture2D" uid="uid://0cmke7238b28" path="res://assets/RPG Items 16x16 Pack 1/orb6.png" id="4_ouc0q"]
+[ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="5_xi40h"]
+
+[resource]
+script = ExtResource("3_ectla")
+angular_speed = 270
+radius = 75
+amount = 7
+damage = 10.0
+cooldown = 2.0
+speed = 0.0
+projectile_node = ExtResource("2_mliah")
+upgrades = Array[ExtResource("5_xi40h")]([])
+title = "Huge Asteroid"
+icon = ExtResource("1_xlr6u")
+texture = ExtResource("4_ouc0q")
+metadata/_custom_type_script = "uid://dq26qpcx2n3mi"

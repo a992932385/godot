@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="Lightning" load_steps=15 format=3 uid="uid://m4spuot2lwe4"]
+
+[ext_resource type="Resource" uid="uid://bwliqxaikda74" path="res://Resources/Weapons/Lightning Loop.tres" id="1_8wkvx"]
+[ext_resource type="Texture2D" uid="uid://dyjwr5s7g7jye" path="res://assets/RPG Items 16x16 Pack 1/staff19.png" id="1_g3xsd"]
+[ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="2_mxwk8"]
+[ext_resource type="Resource" uid="uid://dqsqqa8o2dtim" path="res://Resources/Passive Items/Might.tres" id="3_4whfs"]
+[ext_resource type="Script" uid="uid://b6putbx4klk37" path="res://scenes/Lightning.gd" id="3_jrlh5"]
+[ext_resource type="Texture2D" uid="uid://r0tesk0j61or" path="res://assets/lightning_skill3_frame3.png" id="4_8m0oh"]
+[ext_resource type="AudioStream" uid="uid://cpuhabho0jq4a" path="res://assets/SFX/267407__thestarking__lightning-thunder-building-noise.wav" id="4_mxwk8"]
+[ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="5_8wkvx"]
+[ext_resource type="Script" uid="uid://bml0eaf1sfvhh" path="res://scenes/LightningUpgrade.gd" id="7_jrlh5"]
+
+[sub_resource type="Resource" id="Resource_8m0oh"]
+script = ExtResource("7_jrlh5")
+amount = 1
+damage = 0.0
+cooldown = 0.0
+description = "+1 Strike"
+metadata/_custom_type_script = "uid://bml0eaf1sfvhh"
+
+[sub_resource type="Resource" id="Resource_8wkvx"]
+script = ExtResource("7_jrlh5")
+amount = 0
+damage = 0.0
+cooldown = -1.0
+description = "-1s Cooldown"
+metadata/_custom_type_script = "uid://bml0eaf1sfvhh"
+
+[sub_resource type="Resource" id="Resource_4whfs"]
+script = ExtResource("7_jrlh5")
+amount = 0
+damage = 0.0
+cooldown = 0.0
+description = "+1 Strike"
+metadata/_custom_type_script = "uid://bml0eaf1sfvhh"
+
+[sub_resource type="Resource" id="Resource_r73sq"]
+script = ExtResource("7_jrlh5")
+amount = 0
+damage = 3.0
+cooldown = 0.0
+description = "+3 Damage"
+metadata/_custom_type_script = "uid://bml0eaf1sfvhh"
+
+[sub_resource type="Resource" id="Resource_oprcr"]
+script = ExtResource("7_jrlh5")
+amount = 1
+damage = 0.0
+cooldown = 0.0
+description = "+1 Strike"
+metadata/_custom_type_script = "uid://bml0eaf1sfvhh"
+
+[resource]
+script = ExtResource("3_jrlh5")
+amount = 1
+damage = 2.0
+cooldown = 4.0
+speed = 0.0
+projectile_node = ExtResource("2_mxwk8")
+upgrades = Array[ExtResource("5_8wkvx")]([SubResource("Resource_8m0oh"), SubResource("Resource_8wkvx"), SubResource("Resource_4whfs"), SubResource("Resource_r73sq"), SubResource("Resource_oprcr")])
+item_needed = ExtResource("3_4whfs")
+evolution = ExtResource("1_8wkvx")
+sound = ExtResource("4_mxwk8")
+title = "Lightning"
+icon = ExtResource("1_g3xsd")
+texture = ExtResource("4_8m0oh")
+metadata/_custom_type_script = "uid://b6putbx4klk37"
