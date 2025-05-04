@@ -5,14 +5,26 @@ var health : float = 100:
 	set(value):
 		health = max(value, 0)
 		%Health.value = value
+		if health <= 0:
+			get_tree().paused = true
+			
 var movement_speed : float = 150
 var max_health : float = 100 :
 	set(value):
 		max_health = value
 		%Health.max_value = value
-var recovery : float = 0
-var armor : float = 0
-var might : float = 1.0
+var recovery : float = 0:
+	set(value):
+		recovery = value
+		%Recovery.text = "R : " + str(value)
+var armor : float = 0:
+	set(value):
+		armor = value
+		%Armor.text = "A : " + str(value)
+var might : float = 1.0:
+	set(value):
+		might = value
+		%Might.text = "M : " + str(value)
 var area : float = 0
 var magnet : float = 0:
 	set(value):
@@ -45,6 +57,10 @@ var level : int = 1:
 		elif level >= 7:
 			%XP.max_value = 40
 
+
+func _ready() -> void:
+	Persistence.gain_bonus_stats(self)
+
 func _physics_process(delta):
 	if is_instance_valid(nearest_enemy):
 		nearest_enemy_distance = nearest_enemy.separation
@@ -58,7 +74,7 @@ func _physics_process(delta):
 	health += recovery * delta
  
 func take_damage(amount):
-	health -= max(amount - armor, 0)
+	health -= max(amount * (armor/(amount + armor)), 1)
 
 func _on_self_damage_body_entered(body):
 	take_damage(body.damage)
