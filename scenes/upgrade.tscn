@@ -16,4 +16,8 @@ offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 1
 
+[node name="Outline" type="Line2D" parent="."]
+
+[node name="Connection" type="Line2D" parent="."]
+
 [connection signal="pressed" from="." to="." method="_on_pressed"]

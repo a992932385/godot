@@ -1,14 +1,54 @@
-[gd_scene load_steps=28 format=3 uid="uid://cdhhx8a5qu4g3"]
+[gd_scene load_steps=43 format=3 uid="uid://cdhhx8a5qu4g3"]
 
 [ext_resource type="PackedScene" uid="uid://dolrsx6ilm4r5" path="res://scenes/upgrade.tscn" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://drx3i7uvvuxd" path="res://scenes/main_menu.gd" id="1_rcqid"]
 [ext_resource type="Script" uid="uid://b5jmp6nw5jp8d" path="res://scenes/skill_tree.gd" id="1_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://bamhylfo1c2sb" path="res://assets/GUI2.png" id="2_1ajci"]
 [ext_resource type="Script" uid="uid://dxnicd6jdyq5m" path="res://scenes/Skill.gd" id="2_wu84c"]
 [ext_resource type="Script" uid="uid://db4se630cvp52" path="res://scenes/Stats.gd" id="3_8ln24"]
 [ext_resource type="Texture2D" uid="uid://dixpwou671xdc" path="res://assets/Level UP & Option/Amethyst Shard.png" id="4_rtw2f"]
 [ext_resource type="Script" uid="uid://be0hrthsqf8ch" path="res://scenes/UI_Gold.gd" id="5_8ln24"]
 [ext_resource type="Texture2D" uid="uid://bfhilbhvwtwdq" path="res://assets/RPG Items 16x16 Pack 1/book20.png" id="6_tbmy8"]
 [ext_resource type="Texture2D" uid="uid://bwdt1vc86p01b" path="res://assets/Level UP & Option/Lapis.png" id="7_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://bm1ecpa8ja2dn" path="res://assets/GUI1.png" id="8_5dd4i"]
 [ext_resource type="Script" uid="uid://dhoohegybsaiw" path="res://scenes/start.gd" id="9_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://bubh4hyopcu6e" path="res://assets/GUI3.png" id="12_7b55j"]
+[ext_resource type="Script" uid="uid://cs85pwcde2r4d" path="res://scenes/enemy_list.gd" id="13_1ajci"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jk1qb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dd4i"]
+bg_color = Color(0.25098, 0.286275, 0.411765, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgwnu"]
+bg_color = Color(0.25098, 0.286275, 0.411765, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+shadow_size = 2
+
+[sub_resource type="Theme" id="Theme_flqon"]
+Button/styles/focus = SubResource("StyleBoxEmpty_jk1qb")
+Button/styles/hover = SubResource("StyleBoxFlat_5dd4i")
+Button/styles/normal = SubResource("StyleBoxFlat_lgwnu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5pajh"]
+texture = ExtResource("2_1ajci")
+texture_margin_left = 7.63037
+texture_margin_top = 7.41236
+texture_margin_right = 7.73938
+texture_margin_bottom = 6.2133
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 48, 32)
 
 [sub_resource type="Resource" id="Resource_oa1go"]
 script = ExtResource("3_8ln24")
@@ -199,6 +239,49 @@ cost = 500
 stats = SubResource("Resource_gw5y6")
 metadata/_custom_type_script = "uid://dxnicd6jdyq5m"
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lgwnu"]
+texture = ExtResource("8_5dd4i")
+texture_margin_left = 8.82943
+texture_margin_top = 8.1754
+texture_margin_right = 7.41236
+texture_margin_bottom = 8.06639
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j7ex8"]
+texture = ExtResource("2_1ajci")
+texture_margin_left = 6.75833
+texture_margin_top = 6.97634
+texture_margin_right = 7.08534
+texture_margin_bottom = 5.45026
+region_rect = Rect2(0, 0, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a8gd2"]
+texture = ExtResource("12_7b55j")
+texture_margin_left = 3.92419
+texture_margin_top = 3.81519
+texture_margin_right = 3.27016
+texture_margin_bottom = 3.92419
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hstxw"]
+texture = ExtResource("12_7b55j")
+texture_margin_left = 4.25121
+texture_margin_top = 5.34126
+texture_margin_right = 4.46922
+texture_margin_bottom = 4.57822
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8egab"]
+texture = ExtResource("2_1ajci")
+texture_margin_left = 6.43131
+texture_margin_top = 6.97634
+texture_margin_right = 7.08534
+texture_margin_bottom = 5.66828
+expand_margin_left = 6.0
+expand_margin_top = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 6.0
+region_rect = Rect2(0, 0, 48, 32)
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -206,14 +289,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_flqon")
+script = ExtResource("1_rcqid")
 
 [node name="SkillTree" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(320, 180)
+theme_override_styles/panel = SubResource("StyleBoxTexture_5pajh")
 script = ExtResource("1_rtw2f")
 
 [node name="Might" type="Control" parent="SkillTree"]
@@ -330,7 +418,140 @@ offset_right = 300.0
 offset_bottom = 32.0
 skill = SubResource("Resource_svtp6")
 
+[node name="Menu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 180)
+theme_override_styles/panel = SubResource("StyleBoxTexture_lgwnu")
+
+[node name="Start" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -136.0
+offset_right = 51.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Start"
+script = ExtResource("9_jk1qb")
+
+[node name="Upgrades" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 192.0
+offset_right = 562.0
+offset_bottom = 223.0
+text = "Upgrades"
+
+[node name="Beastiary" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 192.0
+offset_right = 169.0
+offset_bottom = 223.0
+text = "Beastiary"
+
+[node name="Beastiary" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(320, 180)
+theme_override_styles/panel = SubResource("StyleBoxTexture_j7ex8")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Beastiary"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -132.0
+offset_right = 290.0
+offset_bottom = 118.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_a8gd2")
+
+[node name="EnemyList" type="VBoxContainer" parent="Beastiary/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("13_1ajci")
+
+[node name="Information" type="Panel" parent="Beastiary"]
+custom_minimum_size = Vector2(250, 225)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -328.0
+offset_top = -296.0
+offset_right = -78.0
+offset_bottom = -71.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_hstxw")
+
+[node name="Texture" type="TextureRect" parent="Beastiary/Information"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -37.0
+offset_top = 16.0
+offset_right = 43.0
+offset_bottom = 96.0
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="Beastiary/Information/Texture"]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_8egab")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Beastiary/Information"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 112.0
+offset_right = 56.0
+offset_bottom = 152.0
+
+[node name="Name" type="Label" parent="Beastiary/Information/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Name :"
+
+[node name="Damage" type="Label" parent="Beastiary/Information/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Damage :"
+
+[node name="Health" type="Label" parent="Beastiary/Information/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Health :"
+
 [node name="Gold" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 440.0
 offset_top = 8.0
@@ -339,20 +560,23 @@ offset_bottom = 31.0
 horizontal_alignment = 2
 script = ExtResource("5_8ln24")
 
-[node name="Start" type="Button" parent="."]
+[node name="Back" type="Button" parent="."]
+visible = false
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -16.0
-offset_top = -88.0
-offset_right = 30.0
-offset_bottom = -57.0
-grow_horizontal = 2
+offset_left = -96.0
+offset_top = -56.0
+offset_right = -51.0
+offset_bottom = -25.0
+grow_horizontal = 0
 grow_vertical = 0
-text = "Start"
-script = ExtResource("9_jk1qb")
+text = "Back"
 
-[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
+[connection signal="pressed" from="Menu/Start" to="Menu/Start" method="_on_pressed"]
+[connection signal="pressed" from="Menu/Upgrades" to="." method="_on_upgrades_pressed"]
+[connection signal="pressed" from="Menu/Beastiary" to="." method="_on_beastiary_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
