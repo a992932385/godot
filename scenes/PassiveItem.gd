@@ -1,6 +1,6 @@
 extends Item
 class_name PassiveItem
- 
+
 @export var upgrades : Array[Stats]
 var player_reference
  
@@ -26,6 +26,7 @@ func upgrade_item():
 	player_reference.area += upgrade.area
 	player_reference.magnet += upgrade.magnet
 	player_reference.growth += upgrade.growth
+	player_reference.luck += upgrade.luck
  
 	level += 1
  

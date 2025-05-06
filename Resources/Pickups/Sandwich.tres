@@ -11,4 +11,5 @@ title = "Sandwich"
 icon = ExtResource("1_qxp5q")
 description = "+20 Health"
 sound = ExtResource("3_rmk3e")
+weight = 5.0
 metadata/_custom_type_script = "uid://dilis5671d5n"

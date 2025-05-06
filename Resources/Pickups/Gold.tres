@@ -11,4 +11,5 @@ title = "Gold"
 icon = ExtResource("1_yo82v")
 description = "+5 Gold"
 sound = ExtResource("3_oo1lb")
+weight = 10.0
 metadata/_custom_type_script = "uid://dcrxp7ji0t1k7"

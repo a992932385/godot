@@ -31,7 +31,7 @@ var magnet : float = 0:
 		magnet = value
 		%Magnet.shape.radius = 50 + value
 var growth : float = 1
-
+var luck : float = 2.0
 
 var nearest_enemy
 var nearest_enemy_distance : float = 150 + area

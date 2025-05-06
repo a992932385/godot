@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_tmmxm")
-XP = 0.2
+XP = 10.0
 title = "Blue Gam"
 icon = ExtResource("1_nevim")
 description = "Gams Experience Points."

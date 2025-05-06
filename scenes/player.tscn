@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://5ai2pgkflnoh"]
+[gd_scene load_steps=37 format=3 uid="uid://5ai2pgkflnoh"]
 
 [ext_resource type="Script" uid="uid://6jo3mwqq4qmg" path="res://scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://4f2nluns6n18" path="res://scenes/slot.tscn" id="2_qhqgy"]
@@ -8,13 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bmme2fpwgautf" path="res://assets/Level UP & Option/UnderXP.png" id="4_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://j0nww12j02lt" path="res://assets/Level UP & Option/ExpBar.png" id="5_fjrip"]
 [ext_resource type="PackedScene" uid="uid://cvawojoigwogb" path="res://scenes/passive_slot.tscn" id="5_ur7pv"]
-[ext_resource type="Resource" uid="uid://b7n54gmbx6ked" path="res://Resources/Weapons/Asteroid.tres" id="6_a8ls1"]
 [ext_resource type="Texture2D" uid="uid://bvcxgu42gf4tr" path="res://assets/Level UP & Option/ProgressOfExpBar.png" id="6_smehm"]
-[ext_resource type="Resource" uid="uid://c2jmjlf2bp1gi" path="res://Resources/Passive Items/Magnet.tres" id="7_d2wvv"]
 [ext_resource type="Script" uid="uid://ck08824it04c1" path="res://scenes/options.gd" id="7_fjrip"]
-[ext_resource type="Resource" uid="uid://m4spuot2lwe4" path="res://Resources/Weapons/Lightning.tres" id="7_fulsm"]
-[ext_resource type="Resource" uid="uid://dka8ykbbpcr54" path="res://Resources/Passive Items/Recovery.tres" id="9_qfm1y"]
-[ext_resource type="Resource" uid="uid://dqsqqa8o2dtim" path="res://Resources/Passive Items/Might.tres" id="11_4r5pv"]
 [ext_resource type="Script" uid="uid://bdkie2tr4jhwk" path="res://scenes/chest.gd" id="12_jej6c"]
 [ext_resource type="Texture2D" uid="uid://ufncb7tb7mwp" path="res://assets/Fantasy RPG (Toony) 32x32.png" id="13_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://b6xpbwih38g2x" path="res://assets/character/character.png" id="14_f1ej7"]
@@ -243,11 +238,9 @@ item = ExtResource("3_dqkch")
 
 [node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_qhqgy")]
 layout_mode = 2
-item = ExtResource("6_a8ls1")
 
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_qhqgy")]
 layout_mode = 2
-item = ExtResource("7_fulsm")
 
 [node name="PassiveItems" type="HBoxContainer" parent="UI"]
 offset_left = 5.0
@@ -257,15 +250,12 @@ offset_bottom = 102.0
 
 [node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("5_ur7pv")]
 layout_mode = 2
-item = ExtResource("7_d2wvv")
 
 [node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("5_ur7pv")]
 layout_mode = 2
-item = ExtResource("9_qfm1y")
 
 [node name="PassiveSlot3" parent="UI/PassiveItems" instance=ExtResource("5_ur7pv")]
 layout_mode = 2
-item = ExtResource("11_4r5pv")
 
 [node name="XP" type="TextureProgressBar" parent="UI"]
 unique_name_in_owner = true

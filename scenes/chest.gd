@@ -1,8 +1,9 @@
 extends NinePatchRect
  
 @onready var chest = $AnimatedSprite2D
-@onready var rewards = $Rewards
 @onready var options = %Options
+@onready var rewards = $Rewards
+@export var sound : AudioStream
  
 func _ready():
 	randomize()
@@ -21,10 +22,12 @@ func open():
 func set_reward():
 	clear_reward()
 	var chance = randf()
-	if chance < 0.5:
+	var weight = [5.0,2.0,1.0]
+	
+	if chance < get_weighted_chance(weight, 0):
 		upgrade_item(2,3)
 		print("rare")
-	elif chance < 0.75:
+	elif chance < get_weighted_chance(weight, 1):
 		upgrade_item(1,4)
 		print("epic")
 	else:
@@ -70,3 +73,19 @@ func add_gold(index):
 	rewards.get_child(index).texture = gold.icon
 	gold.activate()
  
+func get_weighted_chance(weight, index):
+	var modified_weight = []
+	var sum = 0
+	for i in range(weight.size()):
+		if i == 0:
+			modified_weight.append(weight[i])
+			sum += weight[i]
+		else:
+			modified_weight.append(weight[i] * owner.luck)
+			sum += weight[i] * owner.luck
+			
+	var cumulative = 0
+	for i in range(index +1):
+		cumulative += modified_weight[i]
+		
+	return float(cumulative)/sum
