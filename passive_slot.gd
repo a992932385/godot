@@ -4,7 +4,7 @@ extends PanelContainer
 	set(value):
 		item = value
 		$TextureRect.texture = value.texture
-		#value.player_reference = owner
+		value.player_reference = owner
 
 func _ready():
 	if item != null:
