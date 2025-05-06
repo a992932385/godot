@@ -38,7 +38,7 @@ func _on_back_pressed() -> void:
 	
 	
 func  tween_pop(panel):
-	SoundManager.play_sfx(load("res://assets/SFX/UI/BGM04town0.wav"))
+	SoundManager.play_sfx(load("res://assets/SFX/UI/757175__henkonen__blip-1.wav"))
 	panel.scale = Vector2(0.85,0.85)
 	var tween = get_tree().create_tween().set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_ELASTIC)
 	tween.tween_property(panel, "scale", Vector2(1,1), 0.5)

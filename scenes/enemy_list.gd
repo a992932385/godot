@@ -34,4 +34,4 @@ func _on_pressed(button : Button):
 	%Health.text = "Health : " + str(enemies[index].health)
 	%Damage.text = "Damage : " + str(enemies[index].damage)
 	%Texture.texture = enemies[index].texture
-	SoundManager.play_sfx(load("res://assets/SFX/UI/01-INTRO.wav"))
+	SoundManager.play_sfx(load("res://assets/SFX/UI/757175__henkonen__blip-1.wav"))
