@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Blade" load_steps=5 format=3 uid="uid://cgjxl2ss4xopv"]
+
+[ext_resource type="Texture2D" uid="uid://dw13wmdajfocm" path="res://assets/RPG Items 16x16 Pack 1/sword5.png" id="1_l6kim"]
+[ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="2_mihq4"]
+[ext_resource type="Script" uid="uid://c6co4xffiauod" path="res://scenes/Blade.gd" id="3_0em6u"]
+[ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="4_58vtr"]
+
+[resource]
+script = ExtResource("3_0em6u")
+area = 2.0
+amount = 7
+reversible = false
+delay = 0.2
+damage = 10.0
+cooldown = 3.0
+speed = 1200.0
+projectile_node = ExtResource("2_mihq4")
+upgrades = Array[ExtResource("4_58vtr")]([])
+title = "Demon Blade"
+icon = ExtResource("1_l6kim")
+texture = ExtResource("1_l6kim")
+metadata/_custom_type_script = "uid://c6co4xffiauod"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=6 format=3 uid="uid://c1x54b10wef2l"]
+
+[ext_resource type="Texture2D" uid="uid://bqf21w2mbdsp8" path="res://assets/fire_fear-Sheet6.png" id="1_asf36"]
+[ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="2_bwl8b"]
+[ext_resource type="Script" uid="uid://c474474a5gasy" path="res://scenes/DamagingArea.gd" id="3_tdhtc"]
+[ext_resource type="AudioStream" uid="uid://bp00kcqcg4ujx" path="res://assets/SFX/662467__fullstacksound__rope_pickup.wav" id="4_kfaqf"]
+[ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="5_ar088"]
+
+[resource]
+script = ExtResource("3_tdhtc")
+angular_speed = 30.0
+area = 1.0
+damage = 10.0
+cooldown = 0.5
+speed = 0.0
+projectile_node = ExtResource("2_bwl8b")
+upgrades = Array[ExtResource("5_ar088")]([])
+sound = ExtResource("4_kfaqf")
+title = "Soul Field"
+icon = ExtResource("1_asf36")
+texture = ExtResource("1_asf36")
+metadata/_custom_type_script = "uid://c474474a5gasy"

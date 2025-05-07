@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="MultiDamagingArea" load_steps=13 format=3 uid="uid://cng7jtctvnfh0"]
+
+[ext_resource type="Texture2D" uid="uid://n7m3a0pisefx" path="res://assets/Sprite-0004.png" id="1_3hlku"]
+[ext_resource type="Resource" uid="uid://dc3nl520llyob" path="res://Resources/Weapons/Lava Puddle.tres" id="1_gglk5"]
+[ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="2_imch8"]
+[ext_resource type="Resource" uid="uid://c5kgl2xhw6bsb" path="res://Resources/Passive Items/Area.tres" id="3_dn4qw"]
+[ext_resource type="Script" uid="uid://dcinjgxmdlj68" path="res://scenes/MultiDamagingArea.gd" id="3_y6rg5"]
+[ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="4_gglk5"]
+[ext_resource type="Script" uid="uid://bi4p3tva8nc2n" path="res://scenes/MultiDamagingAreaUpgrade.gd" id="7_3jouq"]
+
+[sub_resource type="Resource" id="Resource_v4ace"]
+script = ExtResource("7_3jouq")
+amount = 0
+area = 0.0
+damage = 2.0
+cooldown = 0.0
+description = "+2 Damage"
+metadata/_custom_type_script = "uid://bi4p3tva8nc2n"
+
+[sub_resource type="Resource" id="Resource_3qbut"]
+script = ExtResource("7_3jouq")
+amount = 2
+area = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+2 Amount"
+metadata/_custom_type_script = "uid://bi4p3tva8nc2n"
+
+[sub_resource type="Resource" id="Resource_r5kcr"]
+script = ExtResource("7_3jouq")
+amount = 0
+area = 0.5
+damage = 0.0
+cooldown = 0.0
+description = "+50% Area"
+metadata/_custom_type_script = "uid://bi4p3tva8nc2n"
+
+[sub_resource type="Resource" id="Resource_7cop2"]
+script = ExtResource("7_3jouq")
+amount = 2
+area = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+2 Amount"
+metadata/_custom_type_script = "uid://bi4p3tva8nc2n"
+
+[sub_resource type="Resource" id="Resource_e7c82"]
+script = ExtResource("7_3jouq")
+amount = 0
+area = 0.0
+damage = 2.0
+cooldown = 0.0
+description = "+2 Damage"
+metadata/_custom_type_script = "uid://bi4p3tva8nc2n"
+
+[resource]
+script = ExtResource("3_y6rg5")
+amount = 1
+area = 3.0
+delay = 0.2
+damage = 1.0
+cooldown = 4.0
+speed = 0.0
+projectile_node = ExtResource("2_imch8")
+upgrades = Array[ExtResource("4_gglk5")]([SubResource("Resource_v4ace"), SubResource("Resource_3qbut"), SubResource("Resource_r5kcr"), SubResource("Resource_7cop2"), SubResource("Resource_e7c82")])
+item_needed = ExtResource("3_dn4qw")
+evolution = ExtResource("1_gglk5")
+title = "Flame Puddle"
+icon = ExtResource("1_3hlku")
+texture = ExtResource("1_3hlku")
+metadata/_custom_type_script = "uid://dcinjgxmdlj68"

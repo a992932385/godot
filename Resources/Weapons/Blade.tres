@@ -1,0 +1,77 @@
+[gd_resource type="Resource" script_class="Blade" load_steps=13 format=3 uid="uid://cmyarmi6ci7xk"]
+
+[ext_resource type="Resource" uid="uid://cgjxl2ss4xopv" path="res://Resources/Weapons/Demon Blade.tres" id="1_3ftt4"]
+[ext_resource type="Texture2D" uid="uid://dgm54e1uqp2e0" path="res://assets/RPG Items 16x16 Pack 1/sword4.png" id="1_qs5qj"]
+[ext_resource type="Resource" uid="uid://cwgi0buxbw0wp" path="res://Resources/Passive Items/Luck Ring.tres" id="2_ft3hm"]
+[ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="2_sa5yo"]
+[ext_resource type="Script" uid="uid://c6co4xffiauod" path="res://scenes/Blade.gd" id="3_ft3hm"]
+[ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="4_3ftt4"]
+[ext_resource type="Script" uid="uid://gxklern4031p" path="res://scenes/BladeUpgrade.gd" id="6_3ftt4"]
+
+[sub_resource type="Resource" id="Resource_yyuyp"]
+script = ExtResource("6_3ftt4")
+area = 1.0
+speed = 0.0
+amount = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+100% Area"
+metadata/_custom_type_script = "uid://gxklern4031p"
+
+[sub_resource type="Resource" id="Resource_b813m"]
+script = ExtResource("6_3ftt4")
+area = 0.0
+speed = 0.0
+amount = 2.0
+damage = 0.0
+cooldown = 0.0
+description = "+2 Amount"
+metadata/_custom_type_script = "uid://gxklern4031p"
+
+[sub_resource type="Resource" id="Resource_ndolo"]
+script = ExtResource("6_3ftt4")
+area = 0.0
+speed = 200.0
+amount = 0.0
+damage = 0.0
+cooldown = 0.0
+description = "+200 Speed"
+metadata/_custom_type_script = "uid://gxklern4031p"
+
+[sub_resource type="Resource" id="Resource_knqb0"]
+script = ExtResource("6_3ftt4")
+area = 0.0
+speed = 0.0
+amount = 0.0
+damage = 3.0
+cooldown = 0.0
+description = "+3 Damage"
+metadata/_custom_type_script = "uid://gxklern4031p"
+
+[sub_resource type="Resource" id="Resource_yhfvf"]
+script = ExtResource("6_3ftt4")
+area = 0.0
+speed = 0.0
+amount = 2.0
+damage = 0.0
+cooldown = 0.0
+description = "+2 Amount"
+metadata/_custom_type_script = "uid://gxklern4031p"
+
+[resource]
+script = ExtResource("3_ft3hm")
+area = 1.0
+amount = 7
+reversible = true
+delay = 0.3
+damage = 5.0
+cooldown = 3.0
+speed = 600.0
+projectile_node = ExtResource("2_sa5yo")
+upgrades = Array[ExtResource("4_3ftt4")]([SubResource("Resource_yyuyp"), SubResource("Resource_b813m"), SubResource("Resource_ndolo"), SubResource("Resource_knqb0"), SubResource("Resource_yhfvf")])
+item_needed = ExtResource("2_ft3hm")
+evolution = ExtResource("1_3ftt4")
+title = "Blade"
+icon = ExtResource("1_qs5qj")
+texture = ExtResource("1_qs5qj")
+metadata/_custom_type_script = "uid://c6co4xffiauod"
