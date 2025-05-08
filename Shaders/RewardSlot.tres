@@ -1,0 +1,24 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://clqqacywldov3"]
+
+[ext_resource type="Shader" uid="uid://dcgqmo13m0gxn" path="res://Shaders/RewardSlot.gdshader" id="1_vttgf"]
+
+[sub_resource type="Gradient" id="Gradient_hm7hp"]
+offsets = PackedFloat32Array(0, 0.972973)
+colors = PackedColorArray(0.522629, 0.43833, 0.293394, 1, 0.452, 0.36, 0.098, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_72n0l"]
+gradient = SubResource("Gradient_hm7hp")
+
+[resource]
+shader = ExtResource("1_vttgf")
+shader_parameter/gradient = SubResource("GradientTexture1D_72n0l")
+shader_parameter/spread = 0.125
+shader_parameter/cutoff = 0.1
+shader_parameter/size = 0.35
+shader_parameter/speed = 1.0
+shader_parameter/ray1_density = 8.0
+shader_parameter/ray2_density = 30.0
+shader_parameter/ray2_intensity = 0.3
+shader_parameter/core_intensity = 2.0
+shader_parameter/hdr = false
+shader_parameter/seed = 5.0

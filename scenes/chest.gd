@@ -66,12 +66,13 @@ func upgrade_item(start, end):
 				rewards.get_child(index).texture = selected_upgrade.evolution.icon
 			else:
 				rewards.get_child(index).texture = selected_upgrade.icon
- 
+			rewards.get_child(index).show
 			selected_upgrade.upgrade_item()
  
 func clear_reward():
 	for slot in rewards.get_children():
 		slot.texture = null
+		slot.hide()
  
 func _on_close_pressed():
 	get_tree().paused = false
@@ -91,4 +92,5 @@ func add_gold(index):
 	var gold : Gold = load("res://Resources/Pickups/Gold.tres")
 	gold.player_reference = owner
 	rewards.get_child(index).texture = gold.icon
+	rewards.get_child(index).show()
 	gold.activate()

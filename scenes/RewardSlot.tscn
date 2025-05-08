@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://t63hs62570ow"]
+
+[ext_resource type="Material" uid="uid://clqqacywldov3" path="res://Shaders/RewardSlot.tres" id="1_gsi2v"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_left = -20.0
+offset_top = -18.0
+offset_right = 20.0
+offset_bottom = 22.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Panel" type="Panel" parent="."]
+show_behind_parent = true
+material = ExtResource("1_gsi2v")
+offset_left = -26.0
+offset_top = -25.0
+offset_right = 68.0
+offset_bottom = 63.0

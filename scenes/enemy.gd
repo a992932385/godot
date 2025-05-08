@@ -57,6 +57,7 @@ func damage_popup(amount, modifier = 1.0):
 	popup.text = str(amount * modifier)
 	popup.position = position + Vector2(-50,-25)
 	if modifier > 1.0:
+		ParticleFx.add_effect("blood", position)
 		popup.set("theme_override_colors/font_color", Color.RED)
 	get_tree().current_scene.add_child(popup)
 	

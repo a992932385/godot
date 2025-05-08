@@ -57,9 +57,11 @@ var level : int = 1:
 		elif level >= 7:
 			%XP.max_value = 40
 
+var distance_in_pixel : float
 
 func _ready() -> void:
 	Persistence.gain_bonus_stats(self)
+
 
 func _physics_process(delta):
 	if is_instance_valid(nearest_enemy):
@@ -68,8 +70,15 @@ func _physics_process(delta):
 		nearest_enemy_distance = 150 + area
 		nearest_enemy = null
 		
+	var initial_position = position
 	velocity=Input.get_vector("left","right","up","down") * movement_speed
 	move_and_collide(velocity*delta)
+	distance_in_pixel += position.distance_to(initial_position)
+	
+	if distance_in_pixel >= 20:
+		distance_in_pixel -= 20
+		ParticleFx.add_effect("dust", position + Vector2(0,15))
+	
 	check_XP()
 	health += recovery * delta
  

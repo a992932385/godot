@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 SoundManager="*res://scenes/sound_manager.tscn"
 SaveData="*res://scenes/save_data.tscn"
 Persistence="*res://scenes/persistence.tscn"
+ParticleFx="*res://scenes/particle_fx.tscn"
 
 [display]
 
@@ -37,6 +38,7 @@ version_control/autoload_on_startup=true
 [file_customization]
 
 folder_colors={
+"res://Particles/": "green",
 "res://Resources/": "blue",
 "res://Resources/Enemies/": "red",
 "res://Resources/Passive Items/": "orange",
