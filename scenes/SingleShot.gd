@@ -14,6 +14,7 @@ func shoot(source, target, scene_tree):
 	projectile.source = source
 	projectile.direction = (target.position - source.position).normalized()
 	projectile.find_child("Sprite2D").texture = texture
+	projectile.find_child("Particle").process_material = particle
  
 	scene_tree.current_scene.add_child(projectile)
  

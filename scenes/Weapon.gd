@@ -9,6 +9,7 @@ class_name  Weapon
 @export var item_needed : PassiveItem
 @export var evolution : Weapon
 @export var sound : AudioStream
+@export var particle : ParticleProcessMaterial = null
 
 var slot
 

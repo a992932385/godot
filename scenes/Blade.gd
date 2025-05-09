@@ -26,6 +26,7 @@ func add_to_player(source, index):
 	projectile.source = source
 	projectile.scale = Vector2(area,area)
 	projectile.find_child("CollisionShape2D").shape.radius = 12
+	projectile.find_child("Particle").process_material = particle
 	projectile.direction = (source.get_global_mouse_position() - source.position).normalized()
 	if index % 2 == 1 and reversible:
 		projectile.direction *= -1

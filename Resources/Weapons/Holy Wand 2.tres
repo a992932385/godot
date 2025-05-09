@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=5 format=3 uid="uid://bix5f3gp6affn"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=6 format=3 uid="uid://bix5f3gp6affn"]
 
 [ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="1_md60e"]
 [ext_resource type="Script" uid="uid://d3pu0altejar2" path="res://scenes/SingleShot.gd" id="2_b3e8r"]
+[ext_resource type="Material" uid="uid://ct1gkhugnyjkx" path="res://Particles/Weapon Particles/Magic.tres" id="2_tdwvx"]
 [ext_resource type="Texture2D" uid="uid://bqj1aywnye67h" path="res://assets/RPG Items 16x16 Pack 1/staff5.png" id="3_tdwvx"]
 [ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="4_f0yxm"]
 
@@ -12,6 +13,7 @@ cooldown = 0.1
 speed = 500.0
 projectile_node = ExtResource("1_md60e")
 upgrades = Array[ExtResource("4_f0yxm")]([])
+particle = ExtResource("2_tdwvx")
 title = "Holy Wand 2"
 icon = ExtResource("3_tdwvx")
 texture = ExtResource("3_tdwvx")

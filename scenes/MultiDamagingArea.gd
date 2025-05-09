@@ -31,6 +31,7 @@ func add_to_world(source, tree):
  
 	projectile.find_child("Sprite2D").texture = texture
 	projectile.find_child("CollisionShape2D").shape.radius = 12
+	projectile.find_child("Particle").process_material = particle
 	projectile.hide()
 	projectile.knockback = -40
 	projectile_reference.append(projectile)

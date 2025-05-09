@@ -11,4 +11,5 @@ title = "Green Gem"
 icon = ExtResource("1_1ldgj")
 description = "Gams Experience."
 sound = ExtResource("3_dawop")
+weight = 0.0
 metadata/_custom_type_script = "uid://c0godpj6f8ork"

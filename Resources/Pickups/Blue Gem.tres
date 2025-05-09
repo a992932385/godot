@@ -11,4 +11,5 @@ title = "Blue Gam"
 icon = ExtResource("1_nevim")
 description = "Gams Experience Points."
 sound = ExtResource("3_tmmxm")
+weight = 0.0
 metadata/_custom_type_script = "uid://c0godpj6f8ork"

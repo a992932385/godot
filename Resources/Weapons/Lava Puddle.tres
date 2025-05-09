@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="MultiDamagingArea" load_steps=5 format=3 uid="uid://dc3nl520llyob"]
+[gd_resource type="Resource" script_class="MultiDamagingArea" load_steps=6 format=3 uid="uid://dc3nl520llyob"]
 
+[ext_resource type="Material" uid="uid://cvg44j0sckhla" path="res://Particles/Weapon Particles/fire.tres" id="1_b17e8"]
 [ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="2_wkkcw"]
 [ext_resource type="Script" uid="uid://dcinjgxmdlj68" path="res://scenes/MultiDamagingArea.gd" id="3_e7ml7"]
 [ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="4_2e8io"]
@@ -17,6 +18,7 @@ cooldown = 4.0
 speed = 0.0
 projectile_node = ExtResource("2_wkkcw")
 upgrades = Array[ExtResource("4_2e8io")]([])
+particle = ExtResource("1_b17e8")
 title = "Lava Puddle"
 icon = SubResource("CompressedTexture2D_hv28p")
 texture = SubResource("CompressedTexture2D_hv28p")

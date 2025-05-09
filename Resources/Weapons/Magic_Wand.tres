@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=14 format=3 uid="uid://d0dv44g11oghg"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=15 format=3 uid="uid://d0dv44g11oghg"]
 
 [ext_resource type="Resource" uid="uid://bix5f3gp6affn" path="res://Resources/Weapons/Holy Wand 2.tres" id="1_74byv"]
 [ext_resource type="Resource" uid="uid://c2jmjlf2bp1gi" path="res://Resources/Passive Items/Magnet.tres" id="2_pdtpv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnbqeijepwpib" path="res://scenes/projectile.tscn" id="3_pdtpv"]
 [ext_resource type="Texture2D" uid="uid://me0ctsqrdcey" path="res://assets/RPG Items 16x16 Pack 1/staff24.png" id="3_w84y1"]
 [ext_resource type="AudioStream" uid="uid://csq12sk53cggq" path="res://assets/SFX/720118__baggonotes__player_shoot1.wav" id="4_74byv"]
+[ext_resource type="Material" uid="uid://ct1gkhugnyjkx" path="res://Particles/Weapon Particles/Magic.tres" id="4_jq72j"]
 [ext_resource type="Script" uid="uid://0nf6d5fj3uiq" path="res://scenes/Upgrade.gd" id="4_w84y1"]
 [ext_resource type="Script" uid="uid://b1kt68stoaqxx" path="res://scenes/ProjectileUpgrade.gd" id="5_w6drx"]
 
@@ -59,6 +60,7 @@ upgrades = Array[ExtResource("4_w84y1")]([SubResource("Resource_74byv"), SubReso
 item_needed = ExtResource("2_pdtpv")
 evolution = ExtResource("1_74byv")
 sound = ExtResource("4_74byv")
+particle = ExtResource("4_jq72j")
 title = "Magic Wand"
 icon = ExtResource("3_w84y1")
 texture = ExtResource("3_w84y1")
