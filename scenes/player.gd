@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@onready var animated_sprite  = $AnimatedSprite2D
 
 var health : float = 100:
 	set(value):
@@ -73,6 +73,15 @@ func _physics_process(delta):
 	var initial_position = position
 	velocity=Input.get_vector("left","right","up","down") * movement_speed
 	move_and_collide(velocity*delta)
+	
+	if velocity.length() > 0:
+		animated_sprite.play("run")
+		# 可选：根据方向翻转角色（如左右移动）
+		if velocity.x != 0:
+			animated_sprite.flip_h = velocity.x < 0
+	else:
+		animated_sprite.play("idle")
+	
 	distance_in_pixel += position.distance_to(initial_position)
 	
 	if distance_in_pixel >= 20:

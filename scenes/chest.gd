@@ -66,7 +66,8 @@ func upgrade_item(start, end):
 				rewards.get_child(index).texture = selected_upgrade.evolution.icon
 			else:
 				rewards.get_child(index).texture = selected_upgrade.icon
-			rewards.get_child(index).show
+			
+			rewards.get_child(index).show()
 			selected_upgrade.upgrade_item()
  
 func clear_reward():

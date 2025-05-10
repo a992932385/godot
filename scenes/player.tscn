@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://5ai2pgkflnoh"]
+[gd_scene load_steps=46 format=3 uid="uid://5ai2pgkflnoh"]
 
 [ext_resource type="Script" uid="uid://6jo3mwqq4qmg" path="res://scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://4f2nluns6n18" path="res://scenes/slot.tscn" id="2_qhqgy"]
@@ -12,8 +12,7 @@
 [ext_resource type="Script" uid="uid://ck08824it04c1" path="res://scenes/options.gd" id="7_fjrip"]
 [ext_resource type="Script" uid="uid://bdkie2tr4jhwk" path="res://scenes/chest.gd" id="12_jej6c"]
 [ext_resource type="Texture2D" uid="uid://ufncb7tb7mwp" path="res://assets/Fantasy RPG (Toony) 32x32.png" id="13_f1ej7"]
-[ext_resource type="Texture2D" uid="uid://b6xpbwih38g2x" path="res://assets/character/character.png" id="14_f1ej7"]
-[ext_resource type="Script" uid="uid://xo2mqbf5mms4" path="res://scenes/sprite_player.gd" id="15_oprun"]
+[ext_resource type="Texture2D" uid="uid://bkcauctvhwta5" path="res://assets/character/character_.png" id="15_qfm1y"]
 [ext_resource type="Script" uid="uid://giogeh8p828g" path="res://scenes/back.gd" id="18_60mlk"]
 [ext_resource type="PackedScene" uid="uid://t63hs62570ow" path="res://scenes/RewardSlot.tscn" id="18_i4ail"]
 
@@ -151,6 +150,80 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 shadow_size = 1
 shadow_offset = Vector2(2, 2)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf23h"]
+atlas = ExtResource("15_qfm1y")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt7fs"]
+atlas = ExtResource("15_qfm1y")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqfne"]
+atlas = ExtResource("15_qfm1y")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnwbv"]
+atlas = ExtResource("15_qfm1y")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gl8cc"]
+atlas = ExtResource("15_qfm1y")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_487ah"]
+atlas = ExtResource("15_qfm1y")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_md1ol"]
+atlas = ExtResource("15_qfm1y")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bj30b"]
+atlas = ExtResource("15_qfm1y")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jc3p3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf23h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt7fs")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqfne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnwbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gl8cc")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_487ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_md1ol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bj30b")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhqgy"]
 
@@ -339,7 +412,6 @@ sprite_frames = SubResource("SpriteFrames_pf23h")
 animation = &"open_boss_chest"
 autoplay = "idle_boss_chest"
 frame = 11
-frame_progress = 1.0
 
 [node name="Open" type="Button" parent="UI/Chest"]
 layout_mode = 1
@@ -436,12 +508,11 @@ grow_vertical = 2
 text = "Back to Menu"
 script = ExtResource("18_60mlk")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2, -1)
-texture = ExtResource("14_f1ej7")
-hframes = 3
-vframes = 4
-script = ExtResource("15_oprun")
+sprite_frames = SubResource("SpriteFrames_jc3p3")
+animation = &"idle"
+frame_progress = 0.3992
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qhqgy")
