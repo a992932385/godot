@@ -5,4 +5,5 @@ class_name  Enemy
 @export var texture : Texture2D
 @export var health : float
 @export var damage : float
+@export var frames : int = 1
 @export var drops : Array[Pickups]

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://c16h2miq2jrox"]
+
+[ext_resource type="Script" uid="uid://cj4g2v5fupobx" path="res://scenes/PickupResource.gd" id="1_kgyme"]
+[ext_resource type="Resource" uid="uid://d3bf4keyqrm05" path="res://Resources/Pickups/Green Gem.tres" id="2_4sm4v"]
+[ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="3_1cksc"]
+[ext_resource type="Texture2D" uid="uid://bc036fvmfhqaj" path="res://assets/Enemy_Galore_I/Rat/Rat_Idle.png" id="4_kgyme"]
+
+[resource]
+script = ExtResource("3_1cksc")
+title = "Rat"
+texture = ExtResource("4_kgyme")
+health = 3.0
+damage = 9.0
+frames = 4
+drops = Array[ExtResource("1_kgyme")]([ExtResource("2_4sm4v")])
+metadata/_custom_type_script = "uid://c5t2ceec6hilh"

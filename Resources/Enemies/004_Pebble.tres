@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://d3ouaadlhchoy"]
+
+[ext_resource type="Script" uid="uid://cj4g2v5fupobx" path="res://scenes/PickupResource.gd" id="1_qr8cr"]
+[ext_resource type="Resource" uid="uid://d3bf4keyqrm05" path="res://Resources/Pickups/Green Gem.tres" id="2_55k4i"]
+[ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="3_0ltdg"]
+[ext_resource type="Texture2D" uid="uid://bs6ubx2c5asqy" path="res://assets/Enemy_Galore_I/Pebble/Pebble_Idle.png" id="4_qr8cr"]
+
+[resource]
+script = ExtResource("3_0ltdg")
+title = "Pebble"
+texture = ExtResource("4_qr8cr")
+health = 3.0
+damage = 7.0
+frames = 4
+drops = Array[ExtResource("1_qr8cr")]([ExtResource("2_55k4i")])
+metadata/_custom_type_script = "uid://c5t2ceec6hilh"

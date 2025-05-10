@@ -27,12 +27,31 @@ var type : Enemy:
 	set(value):
 		type = value
 		$Sprite2D.texture = value.texture
+		$Sprite2D.hframes = value.frames
 		damage = value.damage
 		health = value.health
 
+var duration : float = 0
+var FPS : int = 8
+
 func  _physics_process(delta) :
+	animation(delta)
 	check_separation(delta)
 	knockback_updata(delta)
+		
+func  animation(delta):
+	if (player_reference.position.x - position.x) < 0:
+		$Sprite2D.flip_h = true
+	else:
+		$Sprite2D.flip_h = false
+		
+	if type.frames <=1:
+		return
+		
+	duration += delta
+	if type.frames > 1 and duration >= 1.0/FPS:
+		$Sprite2D.frame = ($Sprite2D.frame + 1) % type.frames
+		duration = 0
 		
 func check_separation(_delta):
 	separation = (player_reference.position - position).length()

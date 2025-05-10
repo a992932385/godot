@@ -2,14 +2,15 @@
 
 [ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="1_0bjxu"]
 [ext_resource type="Script" uid="uid://cj4g2v5fupobx" path="res://scenes/PickupResource.gd" id="1_frp6m"]
-[ext_resource type="Texture2D" uid="uid://cyqfh7fumre2x" path="res://assets/RPG Battlers 3/3 v1.png" id="2_2qk8t"]
 [ext_resource type="Resource" uid="uid://d3bf4keyqrm05" path="res://Resources/Pickups/Green Gem.tres" id="2_tmef7"]
+[ext_resource type="Texture2D" uid="uid://d02276llbcr7h" path="res://assets/Enemy_Galore_I/Golem/Armored/Golem_Armor_Run.png" id="4_frp6m"]
 
 [resource]
 script = ExtResource("1_0bjxu")
-title = "EyeLegs"
-texture = ExtResource("2_2qk8t")
+title = "Golem"
+texture = ExtResource("4_frp6m")
 health = 3.0
 damage = 5.0
+frames = 4
 drops = Array[ExtResource("1_frp6m")]([ExtResource("2_tmef7")])
 metadata/_custom_type_script = "uid://c5t2ceec6hilh"

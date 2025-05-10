@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://bmt0r2h55xjs7"]
+
+[ext_resource type="Script" uid="uid://cj4g2v5fupobx" path="res://scenes/PickupResource.gd" id="1_3ctew"]
+[ext_resource type="Resource" uid="uid://dm17my24oqb66" path="res://Resources/Pickups/Blue Gem.tres" id="2_2adfx"]
+[ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="3_vcjwv"]
+[ext_resource type="Texture2D" uid="uid://dehtv16xr4m8l" path="res://assets/Enemy_Galore_I/Crab/Crab_Idle.png" id="4_3ctew"]
+
+[resource]
+script = ExtResource("3_vcjwv")
+title = "Crab"
+texture = ExtResource("4_3ctew")
+health = 3.0
+damage = 3.0
+frames = 4
+drops = Array[ExtResource("1_3ctew")]([ExtResource("2_2adfx")])
+metadata/_custom_type_script = "uid://c5t2ceec6hilh"

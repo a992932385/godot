@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://c461bi1smpaxm"]
+
+[ext_resource type="Script" uid="uid://cj4g2v5fupobx" path="res://scenes/PickupResource.gd" id="1_xcebo"]
+[ext_resource type="Resource" uid="uid://dm17my24oqb66" path="res://Resources/Pickups/Blue Gem.tres" id="2_afuhc"]
+[ext_resource type="Script" uid="uid://c5t2ceec6hilh" path="res://scenes/EnemyType.gd" id="3_cns15"]
+[ext_resource type="Texture2D" uid="uid://dnlba5u700w3a" path="res://assets/Enemy_Galore_I/Bat/Bat_Fly.png" id="4_3nbu7"]
+
+[resource]
+script = ExtResource("3_cns15")
+title = "Bat"
+texture = ExtResource("4_3nbu7")
+health = 3.0
+damage = 1.0
+frames = 4
+drops = Array[ExtResource("1_xcebo")]([ExtResource("2_afuhc")])
+metadata/_custom_type_script = "uid://c5t2ceec6hilh"
